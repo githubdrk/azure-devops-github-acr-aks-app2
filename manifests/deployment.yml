@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: githubdrkazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: githubdrkazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: githubdrkazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: githubdrkazuredevopsgithubacraksapp 
+          image: acrdrk.azurecr.io/githubdrkazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
